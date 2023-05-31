@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --duration: 1.5s;
+
+  --delay-01: 2s;
+  --delay-02: 4s;
+  --delay-03: 6s;
+  --delay-04: 8s;
+  --delay-05: 10s;
+  --delay-06: 12s;
+  --delay-07: 14s;
+  --delay-08: 16s;
+  --delay-09: 18s;
+  --delay-10: 20s;
+  --delay-11: 22s;
+}
+
+body {
+background: url(/assets/fundo.svg) no-repeat top center;
+background-size: cover;
+background-attachment: fixed;
+padding: 24rem 16.8rem 2rem;
+}
+
+.moles {
+
+  margin: auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-areas: 
+  'A B C D'
+  'E F G H'
+  'I J K L';
+  grid-auto-columns: min-content;
+  grid-column-gap: clamp(6rem, 15rem, 20rem);
+}
+
+.whole {
+  background-image: url(/assets/toupeira6.svg);
+  height: 17rem;
+  width: 22.2rem;
+}
+
+.moles div:nth-child(1) {
+  grid-area: A;
+  animation: MoleOut var(--duration) var(--delay-01);
+}
+
+.moles div:nth-child(2) {
+  grid-area: B;
+  animation: MoleOut var(--duration) var(--delay-08);
+}
+
+.moles div:nth-child(3) {
+  grid-area: C;
+  animation: MoleOut var(--duration) var(--delay-07);
+}
+
+.moles div:nth-child(4) {
+  grid-area: D;
+  animation: MoleOut var(--duration) var(--delay-10);
+}
+
+.moles div:nth-child(5) {
+  grid-area: E;
+  animation: MoleOut var(--duration) var(--delay-04);
+}
+
+.moles div:nth-child(6) {
+  grid-area: F;
+  animation: MoleOut var(--duration);
+}
+
+.moles div:nth-child(7) {
+  grid-area: G;
+  animation: MoleOut var(--duration) var(--delay-11);
+}
+
+.moles div:nth-child(8) {
+  grid-area: H;
+  animation: MoleOut var(--duration) var(--delay-02);
+}
+
+.moles div:nth-child(9) {
+  grid-area: I;
+  animation: MoleOut var(--duration) var(--delay-06);
+}
+
+.moles div:nth-child(10) {
+  grid-area: J;
+  animation: MoleOut var(--duration) var(--delay-09);
+}
+
+.moles div:nth-child(11) {
+  grid-area: K;
+  animation: MoleOut var(--duration) var(--delay-03);
+}
+
+.moles div:nth-child(12) {
+  grid-area: L;
+  animation: MoleOut var(--duration) var(--delay-05);
+}
+
+/* keyframes */
+
+@keyframes MoleOut {
+  0% {
+    background: url(./assets/toupeira1.svg);
+  }
+  
+  20% {
+    background: url(./assets/toupeira2.svg);
+  }
+
+  40% {
+    background: url(./assets/toupeira3.svg);
+
+  }
+
+  60% {
+    background: url(./assets/toupeira4.svg);
+  }
+
+  80% {
+    background: url(./assets/toupeira5.svg);
+  }
+
+  100% {
+    background: url(./assets/toupeira6.svg);
+  }
+}
